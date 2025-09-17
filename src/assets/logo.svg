@@ -1,0 +1,10 @@
+<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .name { fill: #2c3e50; font-family: 'Courier New', monospace; font-weight: bold; font-size: 24px; }
+    .dot { fill: #e74c3c; }
+    .extension { fill: #3498db; font-family: 'Courier New', monospace; font-weight: bold; font-size: 24px; }
+  </style>
+  <text x="0" y="30" class="name">adarsh</text>
+  <circle cx="75" cy="25" r="3" class="dot"/>
+  <text x="85" y="30" class="extension">dev</text>
+</svg>

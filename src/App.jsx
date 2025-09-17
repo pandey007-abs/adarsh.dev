@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from './Context/ThemeContext';
+import { useScrollToTop } from './hooks/useScrollToTop';
+import { Toaster } from 'react-hot-toast'; // Import Toaster
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Services from './components/Services/Services';
+import MyWork from './components/MyWork/MyWork';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import './index.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const { isVisible, scrollToTop } = useScrollToTop();
+  
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  if (isLoading) {
+    return (
+      <div className="loader-container">
+        <div className="loader">
+          <div className="loader-circle"></div>
+          <div className="loader-circle"></div>
+          <div className="loader-circle"></div>
+        </div>
+      </div>
+    );
+  }
+  
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ThemeProvider>
+      <div className="app">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Services />
+          <MyWork />
+          <Contact />
+        </main>
+        <Footer />
+        <div 
+          className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+          </svg>
+        </div>
+        <Toaster position="top-right" /> {/* Add Toaster component */}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;

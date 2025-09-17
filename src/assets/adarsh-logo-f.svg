@@ -1,0 +1,14 @@
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Geometric "A" logo -->
+    <polygon points="35,80 10,80 40,20 70,80 45,80 55,60 35,60" fill="black"/>
+    <polygon points="47,55 59,80 71,80 47,34 35,55" fill="#fff"/>
+    <polygon points="35,60 55,60 47,55 35,55" fill="black"/>
+    <polygon points="45,80 59,80 55,60 45,80" fill="black"/>
+    <!-- Arrow inside "A" -->
+    <polygon points="36,58 54,58 45,42" fill="#fff"/>
+  </g>
+  <!-- "adarsh.dev" text in bold, angular font style -->
+  <text x="90" y="75" font-family="'Montserrat', 'Arial Black', Arial, sans-serif"
+        font-size="48" font-weight="bold" fill="black" letter-spacing="2">adarsh.dev</text>
+</svg>

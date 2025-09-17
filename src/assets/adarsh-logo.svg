@@ -1,0 +1,32 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for icon -->
+    <linearGradient id="iconGradient" x1="0" y1="100" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3F51B5"/>
+      <stop offset="0.3" stop-color="#009688"/>
+      <stop offset="0.6" stop-color="#FFC107"/>
+      <stop offset="1" stop-color="#E91E63"/>
+    </linearGradient>
+    <!-- Gradient for text -->
+    <linearGradient id="textGradient" x1="0" y1="100" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3F51B5"/>
+      <stop offset="0.3" stop-color="#009688"/>
+      <stop offset="0.6" stop-color="#FFC107"/>
+      <stop offset="1" stop-color="#E91E63"/>
+    </linearGradient>
+  </defs>
+  <!-- Geometric "A" monogram shape -->
+  <g>
+    <polygon points="35,80 10,80 40,20 70,80 45,80 55,60 35,60" fill="url(#iconGradient)"/>
+    <polygon points="47,55 59,80 71,80 47,34 35,55" fill="white" opacity="0.5"/>
+    <polygon points="35,60 55,60 47,55 35,55" fill="url(#iconGradient)"/>
+    <polygon points="45,80 59,80 55,60 45,80" fill="url(#iconGradient)"/>
+    <!-- Arrow accent inside "A" -->
+    <polygon points="36,58 54,58 45,42" fill="white" opacity="0.5"/>
+  </g>
+  <!-- Gradient "adarsh.dev" text in bold angular style -->
+  <text x="90" y="75" font-family="'Montserrat', 'Arial Black', Arial, sans-serif"
+        font-size="48" font-weight="bold" fill="url(#textGradient)" letter-spacing="2">
+    adarsh.dev
+  </text>
+</svg>
